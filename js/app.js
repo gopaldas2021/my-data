@@ -3,7 +3,7 @@
             e.preventDefault();                          
         }, false);
         
-        //Disable Shortcyt Key
+        //Disable Shortcut Key
         document.addEventListener("keydown", function(e){
             if(e.ctrlKey || e.keyCode==123){
                 e.stopPropagation();
@@ -22,7 +22,6 @@
             console.log(pwdField);
                 let overlay = document.querySelector(".overlay");
                 overlay.style.display = "none";
-				pwdField = " ";
             }else{
                 let msg = document.getElementById("msg");
                 msg.style.display = "block";
