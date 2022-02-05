@@ -16,7 +16,7 @@
         btnSubmit.onclick = (e) => {
 			e.preventDefault();
             let pwdField = document.getElementById("floatingPassword").value;
-            const PWD = "English";
+            const PWD = "English@book1";
             
             if(pwdField == PWD) {
             console.log(pwdField);
