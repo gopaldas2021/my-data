@@ -15,8 +15,15 @@
 <body>
     <main>
         <div class="container">
-            <div class="heading mb-4 mt-4 text-center">
-                <h1 class="title">My Data</h1>
+            <div class="heading mt-3 mb-3">
+				<div class="row align-items-center">
+					<div class="col-md-3">
+						<h1 class="title">My Data</h1>
+					</div>
+					<div class="col-md-3 offset-6 text-end">
+						<button type="button" id="logout-btn" class="btn btn-sm btn-danger">Logout</button>
+					</div>
+				</div>
             </div>
 
 
@@ -76,9 +83,9 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title text-center mb-3">My Data</h5>
-                    <form>
+                    <form autocomplete="off">
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required="true" autocomplete="new-password">
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="btn-block d-grid mx-auto">
@@ -91,38 +98,7 @@
         </div>
     </main>
 
-    <script>
-        let btnSubmit = document.getElementById("submit-btn");
-        btnSubmit.onclick = (e) => {
-            let pwdField = document.getElementById("floatingPassword").value;
-            
-            let PWD = "English@book1";
-            
-            
-            if (pwdField == PWD) {
-                let overlay = document.querySelector(".overlay");
-                console.log(overlay);
-                overlay.style.display = "none";
-            }else{
-                let msg = document.getElementById("msg");
-                msg.style.display = "block";
-            }
-        }
-        
-        //Disable Right Click
-        document.addEventListener("contextmenu", function(){
-            e.preventDefault();                          
-        }, false);
-        
-        //Disable Shortcyt Key
-        document.addEventListener("keydown", function(e){
-            if(e.ctrlKey || e.keyCode==123){
-                e.stopPropagation();
-                e.preventDefault();
-            }
-        });
-
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
